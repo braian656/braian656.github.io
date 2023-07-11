@@ -30,7 +30,6 @@
 }
 body { 
 	min-height: 100vh;
-/* 	background: var(--background-header); */
 	scroll-behavior: smooth;
 	position: relative;
 	left: 0;
@@ -139,7 +138,7 @@ body {
 }
 
 .box .box_img{
-	background-image: url(./img/restaurant.jpg);
+	background-image: url(./images/restaurant.jpg);
 	background-size: cover;
 	background-position: center center;
 	object-fit: cover;
@@ -241,14 +240,14 @@ body {
 
 
 .box .img_menu{
-	background-image: url(./img/back/imagen-menu.jpg);
+	background-image: url(./images/back/imagen-menu.jpg);
 	background-size: cover;
 	margin-top: 5rem;
 }
 
 .box .img_about{
 	margin-top: 5rem;
-	background-image: url(./img/back/imagen-about.jpg);
+	background-image: url(./images/back/imagen-about.jpg);
 }
 .menu{
 	display: flex;
@@ -439,14 +438,14 @@ h3{
 }
 
 .img_1{
-	background-image: url('./img/section_about/chef.svg');
+	background-image: url('./images/section_about/chef.svg');
 	margin-right: 0.5rem;
 }
 .img_2{
-	background-image: url('./img/section_about/im-4.png');
+	background-image: url('./images/section_about/im-4.png');
 }
 .img_3{
-	background-image: url('./img/section_about/imagen-restaurante-2.png');
+	background-image: url('./images/section_about/imagen-restaurante-2.png');
 	margin-left: 0.5rem
 }
 .img_1,.img_2,.img_3{
