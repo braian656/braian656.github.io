@@ -1,19 +1,3 @@
-const hamburguer = document.querySelector('.hamburguer')
-const header = document.querySelector('.header')
-
-
-const displayBox = ()=>{
-	if (header.style.display ==='none') {
-		header.style.display='flex';
-	}else{
-		header.style.display='none';
-	}
-}
-
-
-
-hamburguer.addEventListener('click', displayBox);
-
 
 const carousel = document.querySelector('.carousel');
 const imgCarousel = document.querySelectorAll('.carousel .img')
@@ -44,17 +28,22 @@ window.addEventListener('resize', () => {
 btnPrevious.addEventListener('click', previous);
 btnNext.addEventListener('click', next);
 
+const headerDisplay = document.querySelector('.header_display')
+const menuBar = document.querySelector('.fa-bars');
+const close = document.querySelector('.fa-sharp');
+const items = document.getElementsByTagName('a');
 
+const closeMenu = ()=>{
+	headerDisplay.style.display = 'none';
+	menuBar.style.display= 'flex';
+}
 
+const menuDisplay = ()=>{
+	if (headerDisplay.style.display = 'none') {
+		headerDisplay.style.display = 'flex';
+		menuBar.style.display = 'none';
+	}
+}
 
-// const nav = document.querySelector('.nav');
-
-// document.addEventListener('scroll', () =>{
-// 	const header = document.querySelector('.header');
-// 	if(window.scrollY > 0){
-// 		header.classList.add('scrolled')
-// 	}else{
-// 		header.classList.remove('scrolled')
-// 	}
-// })
-
+close.addEventListener('click', closeMenu)
+menuBar.addEventListener('click', menuDisplay);
