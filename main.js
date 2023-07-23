@@ -28,22 +28,31 @@ window.addEventListener('resize', () => {
 btnPrevious.addEventListener('click', previous);
 btnNext.addEventListener('click', next);
 
-const headerDisplay = document.querySelector('.header_display')
-const menuBar = document.querySelector('.fa-bars');
-const close = document.querySelector('.fa-sharp');
-const items = document.getElementsByTagName('a');
 
-const closeMenu = ()=>{
-	headerDisplay.style.display = 'none';
-	menuBar.style.display= 'flex';
+const menuNav = document.querySelector('.nav');
+const menuBar = document.querySelector('.bar_menu');
+const menuX = document.querySelector('.fa-x');
+const links = document.querySelectorAll('.item a');
+  
+links.forEach((link)=>{
+	link.addEventListener('click',()=>{
+		menuNav.style.display = 'none'
+	})
+})
+const abrirMenu = ()=>{
+
+	if(menuNav.style.display === 'none'){
+		menuNav.style.display = 'flex';
+	}else{
+		menuNav.style.display = 'none'
+	}
 }
-
-const menuDisplay = ()=>{
-	if (headerDisplay.style.display = 'none') {
-		headerDisplay.style.display = 'flex';
-		menuBar.style.display = 'none';
+const cerrarMenu = ()=>{
+	if(menuNav.style.display === 'flex'){
+		menuNav.style.display = 'none'
 	}
 }
 
-close.addEventListener('click', closeMenu)
-menuBar.addEventListener('click', menuDisplay);
+
+menuX.addEventListener('click', cerrarMenu);
+menuBar.addEventListener('click', abrirMenu);
